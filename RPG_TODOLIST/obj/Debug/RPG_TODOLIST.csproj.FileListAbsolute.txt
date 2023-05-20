@@ -1,0 +1,16 @@
+C:\diplom\RPG_TODOLIST\RPG_TODOLIST\bin\Debug\RPG_TODOLIST.exe.config
+C:\diplom\RPG_TODOLIST\RPG_TODOLIST\bin\Debug\RPG_TODOLIST.exe
+C:\diplom\RPG_TODOLIST\RPG_TODOLIST\bin\Debug\RPG_TODOLIST.pdb
+C:\diplom\RPG_TODOLIST\RPG_TODOLIST\obj\Debug\RPG_TODOLIST.csproj.AssemblyReference.cache
+C:\diplom\RPG_TODOLIST\RPG_TODOLIST\obj\Debug\RPG_TODOLIST.csproj.SuggestedBindingRedirects.cache
+C:\diplom\RPG_TODOLIST\RPG_TODOLIST\obj\Debug\MainWindow.g.cs
+C:\diplom\RPG_TODOLIST\RPG_TODOLIST\obj\Debug\App.g.cs
+C:\diplom\RPG_TODOLIST\RPG_TODOLIST\obj\Debug\RPG_TODOLIST_MarkupCompile.cache
+C:\diplom\RPG_TODOLIST\RPG_TODOLIST\obj\Debug\RPG_TODOLIST_MarkupCompile.lref
+C:\diplom\RPG_TODOLIST\RPG_TODOLIST\obj\Debug\MainWindow.baml
+C:\diplom\RPG_TODOLIST\RPG_TODOLIST\obj\Debug\RPG_TODOLIST.g.resources
+C:\diplom\RPG_TODOLIST\RPG_TODOLIST\obj\Debug\RPG_TODOLIST.Properties.Resources.resources
+C:\diplom\RPG_TODOLIST\RPG_TODOLIST\obj\Debug\RPG_TODOLIST.csproj.GenerateResource.cache
+C:\diplom\RPG_TODOLIST\RPG_TODOLIST\obj\Debug\RPG_TODOLIST.csproj.CoreCompileInputs.cache
+C:\diplom\RPG_TODOLIST\RPG_TODOLIST\obj\Debug\RPG_TODOLIST.exe
+C:\diplom\RPG_TODOLIST\RPG_TODOLIST\obj\Debug\RPG_TODOLIST.pdb
