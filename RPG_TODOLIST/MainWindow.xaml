@@ -24,6 +24,18 @@
         <ProgressBar Name="HealthBar" Height="10" Canvas.Left="225" Canvas.Top="93" Width="157" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#FFBBBBBB" Foreground="Red" Value="88"/>
         <Image Height="20" Canvas.Left="200" Canvas.Top="88" Width="20" Source="/assets/heart.png"/>
         <Image Height="16" Canvas.Left="198" Canvas.Top="66" Width="22" Source="/assets/mana.png"/>
+        <Image Height="18" Canvas.Left="200" Canvas.Top="43" Width="18" Source="/assets/determination.png" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Image Height="20" Canvas.Left="201" Canvas.Top="138" Width="24" Source="/assets/ruble.png" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.874"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <TextBox Height="18" Canvas.Left="225" TextWrapping="Wrap" Text="90" Canvas.Top="138" Width="45" SelectionOpacity="0" Background="Transparent" Foreground="#FFFDFF2C" HorizontalAlignment="Left" VerticalAlignment="Center" BorderBrush="#00ABADB3" FontFamily="Comic Sans MS" CaretBrush="White"/>
 
 
     </Canvas>
