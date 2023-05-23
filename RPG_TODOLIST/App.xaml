@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:RPG_TODOLIST"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+      
     </Application.Resources>
 </Application>

@@ -14,3 +14,12 @@ C:\diplom\RPG_TODOLIST\RPG_TODOLIST\obj\Debug\RPG_TODOLIST.csproj.GenerateResour
 C:\diplom\RPG_TODOLIST\RPG_TODOLIST\obj\Debug\RPG_TODOLIST.csproj.CoreCompileInputs.cache
 C:\diplom\RPG_TODOLIST\RPG_TODOLIST\obj\Debug\RPG_TODOLIST.exe
 C:\diplom\RPG_TODOLIST\RPG_TODOLIST\obj\Debug\RPG_TODOLIST.pdb
+C:\diplom\RPG_TODOLIST\RPG_TODOLIST\bin\Debug\MaterialDesignColors.dll
+C:\diplom\RPG_TODOLIST\RPG_TODOLIST\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\diplom\RPG_TODOLIST\RPG_TODOLIST\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\diplom\RPG_TODOLIST\RPG_TODOLIST\bin\Debug\MaterialDesignColors.pdb
+C:\diplom\RPG_TODOLIST\RPG_TODOLIST\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\diplom\RPG_TODOLIST\RPG_TODOLIST\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\diplom\RPG_TODOLIST\RPG_TODOLIST\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\diplom\RPG_TODOLIST\RPG_TODOLIST\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\diplom\RPG_TODOLIST\RPG_TODOLIST\obj\Debug\RPG_TODOLIST.csproj.CopyComplete
