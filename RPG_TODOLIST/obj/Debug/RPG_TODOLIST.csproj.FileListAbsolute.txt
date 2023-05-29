@@ -23,3 +23,5 @@ C:\diplom\RPG_TODOLIST\RPG_TODOLIST\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\diplom\RPG_TODOLIST\RPG_TODOLIST\bin\Debug\Microsoft.Xaml.Behaviors.pdb
 C:\diplom\RPG_TODOLIST\RPG_TODOLIST\bin\Debug\Microsoft.Xaml.Behaviors.xml
 C:\diplom\RPG_TODOLIST\RPG_TODOLIST\obj\Debug\RPG_TODOLIST.csproj.CopyComplete
+C:\diplom\RPG_TODOLIST\RPG_TODOLIST\obj\Debug\TaskCreatingWindow.g.cs
+C:\diplom\RPG_TODOLIST\RPG_TODOLIST\obj\Debug\TaskCreatingWindow.baml

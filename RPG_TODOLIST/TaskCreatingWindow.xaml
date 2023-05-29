@@ -1,0 +1,20 @@
+﻿<Window x:Class="RPG_TODOLIST.TaskCreatingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RPG_TODOLIST"
+        mc:Ignorable="d"
+        Title="Добавить задачу" Height="349" Width="612">
+    <Canvas HorizontalAlignment="Center" Width="572" Height="306" VerticalAlignment="Top">
+        <Button Content="ДОБАВИТЬ" HorizontalAlignment="Left" VerticalAlignment="Top" Height="71" Width="576" Background="#FF71FF00" Foreground="White" FontSize="48" Canvas.Left="-2" Canvas.Top="251" Click="Button_Click"/>
+        <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="304" Height="80" Canvas.Left="29" Canvas.Top="34"/>
+        <Calendar SelectedDatesChanged="changeDate" x:Name="cal" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="345" Canvas.Top="32" Height="165"/>
+        <TextBox Name="date" Canvas.Left="380" TextWrapping="Wrap" Text="" Canvas.Top="14" Width="144" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Label Content="ДО:" Canvas.Left="345" Canvas.Top="10" RenderTransformOrigin="-0.234,0.425" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label Content="ОПИСАНИЕ" Canvas.Left="146" Canvas.Top="8" HorizontalAlignment="Left" VerticalAlignment="Center" Width="76"/>
+        <Label Content="СЛОЖНОСТЬ ВЫПОЛНЕНИЯ" Canvas.Left="97" Canvas.Top="119" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <ListBox Name="diffsLB" Height="89"   Width="304"  Canvas.Left="29" Canvas.Top="141" RenderTransformOrigin="0.427,0.41" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+    </Canvas>
+</Window>

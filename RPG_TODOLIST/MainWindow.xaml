@@ -38,26 +38,14 @@
         </Image>
         <TextBox Height="30" Canvas.Left="247" TextWrapping="Wrap" Text="90" Canvas.Top="125" Width="50" SelectionOpacity="0" Background="Transparent" Foreground="#FFFDFF2C" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="#00ABADB3" FontFamily="Comic Sans MS" CaretBrush="White" FontSize="20"/>
 
-        <WrapPanel Name="tasks" Background="#FFE2DCDC" Height="393" Width="886" Canvas.Left="304" Canvas.Top="199" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
-            <Canvas Background="#FFB0F7EF" Height="108" Width="236" Margin="20,20,20,20">
-                <Image Source="/assets/ruble.png" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                <TextBox Text="Защитить диплом" Canvas.Left="66" Canvas.Top="7" Height="25" Width="117"/>
-                <TextBox Text="до 20.05.23" Canvas.Left="169" Canvas.Top="80"/>
-            </Canvas>
-            <Canvas Background="#FFB0F7EF" Height="108" Width="236" Margin="20,20,20,20">
-                <Image Source="/assets/ruble.png" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                <TextBox Text="Защитить диплом" Canvas.Left="66" Canvas.Top="7" Height="25" Width="117"/>
-                <TextBox Text="до 20.05.23" Canvas.Left="169" Canvas.Top="80"/>
-            </Canvas>
-            <Canvas Background="#FFB0F7EF" Height="108" Width="236" Margin="20,20,20,20">
-                <Image Source="/assets/ruble.png" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                <TextBox Text="Защитить диплом" Canvas.Left="66" Canvas.Top="7" Height="25" Width="117"/>
-                <TextBox Text="до 20.05.23" Canvas.Left="169" Canvas.Top="80"/>
-            </Canvas>
-           
-        </WrapPanel>
-        
-        
-        <Button Content="Добавить задачу" Click="AddTask" Canvas.Left="135" Canvas.Top="199" Height="57" Width="125"/>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Height="424" Canvas.Left="225" Canvas.Top="185" Width="364" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <WrapPanel  Name="tasks" Background="#FFE2DCDC"  Canvas.Left="304" Canvas.Top="199">
+
+
+            </WrapPanel>
+
+        </ScrollViewer>
+
+        <Button Content="Добавить задачу" Click="AddTask" Canvas.Left="302" Canvas.Top="118" Height="44" Width="66" HorizontalAlignment="Center" VerticalAlignment="Top"/>
     </Canvas>
 </Window>
