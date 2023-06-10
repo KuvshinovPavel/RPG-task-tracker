@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RPG_TODOLIST.Models;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -24,10 +25,13 @@ namespace RPG_TODOLIST
         TaskCreatingWindow taskCreatingWindow;
         public MainWindow()
         {
-         
+           
             InitializeComponent();
-        }
+            todos.ItemsSource = App.TodoDB.GetAll().Result;
 
+
+        }
+        
         private void AddTask(object sender, RoutedEventArgs e)
         {
             taskCreatingWindow = new TaskCreatingWindow();
@@ -61,5 +65,6 @@ namespace RPG_TODOLIST
            // tasks.Children.Add(c);
 
         }
+        
     }
 }

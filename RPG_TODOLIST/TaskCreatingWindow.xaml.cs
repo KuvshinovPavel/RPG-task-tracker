@@ -19,17 +19,12 @@ namespace RPG_TODOLIST
     /// </summary>
     public partial class TaskCreatingWindow : Window
     {
-        public List<String> difficulties = new List<String> { 
-        "Легкая","Средняя","Сложная"};
+      
         public TaskCreatingWindow()
         {
 
             InitializeComponent();
 
-            for (int i = 0; i < difficulties.Count; i++)
-            {
-                diffsLB.Items.Add(difficulties[i]);
-            }
             
         }
 
