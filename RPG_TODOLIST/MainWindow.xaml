@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:RPG_TODOLIST"
         mc:Ignorable="d"
         Title="MainWindow" Height="638" Width="1218">
-    <Canvas Background="#FF1F1F1F">
+    <Canvas Background="#6A5ACD">
 
         <Grid Height="150" Width="180" Canvas.Left="10" Canvas.Top="10">
             <Grid.Background>
@@ -20,8 +20,8 @@
 
 
 
-        <ProgressBar Name="DeterminationBar" Height="10" Canvas.Left="225" Canvas.Top="47" Width="157" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="White" Value="77" Background="#FFBBBBBB"/>
-        <ProgressBar Name="ExperienceBar" Height="10" Canvas.Left="225" Canvas.Top="69" Width="157" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#FFBBBBBB" Foreground="#FF006DFF" Value="86"/>
+        <ProgressBar Name="DeterminationBar" Height="10" Canvas.Left="225" Canvas.Top="47" Width="157" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#F3A505" Value="77" Background="#FFBBBBBB"/>
+        <ProgressBar Name="ExperienceBar" Height="10" Canvas.Left="225" Canvas.Top="69" Width="157" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#FFBBBBBB" Foreground="#2271B3" Value="86"/>
         <ProgressBar Name="HealthBar" Height="10" Canvas.Left="225" Canvas.Top="93" Width="157" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#FFBBBBBB" Foreground="Red" Value="88"/>
         <Image Height="20" Canvas.Left="200" Canvas.Top="88" Width="20" Source="/assets/heart.png"/>
         <Image Height="16" Canvas.Left="198" Canvas.Top="66" Width="22" Source="/assets/mana.png"/>

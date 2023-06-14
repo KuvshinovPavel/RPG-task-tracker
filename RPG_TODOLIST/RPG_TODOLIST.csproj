@@ -148,9 +148,6 @@
     <Resource Include="assets\background_beginner.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="assets\beginner.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="assets\heart.png" />
   </ItemGroup>
   <ItemGroup>
@@ -164,6 +161,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="assets\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\beginner.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets')" />
