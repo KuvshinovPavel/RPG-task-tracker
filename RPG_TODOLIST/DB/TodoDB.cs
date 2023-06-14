@@ -25,6 +25,7 @@ namespace RPG_TODOLIST.DB
         public void AddTodo(Todo todo)
         {
             _connection.InsertAsync(todo).Wait();
+            
         }
     }
 }

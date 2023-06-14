@@ -23,11 +23,7 @@ namespace RPG_TODOLIST
                 {
                     TodoDB = new TodoDB(
                         Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "todos.db"));
-                    TodoDB.AddTodo(new Models.Todo { TodoDescription = "Доделать диплом", Difficulty = "Easy", CompletionDate = new DateTime(), DifficultyColor ="green" });
-                    TodoDB.AddTodo(new Models.Todo {  TodoDescription = "Доделать диплом", Difficulty = "Easy", CompletionDate = new DateTime(), DifficultyColor = "green" });
-                    TodoDB.AddTodo(new Models.Todo {  TodoDescription = "Доделать диплом", Difficulty = "Normal", CompletionDate = new DateTime(), DifficultyColor = "yellow" });
-                    TodoDB.AddTodo(new Models.Todo {  TodoDescription = "Доделать диплом", Difficulty = "HArd", CompletionDate = new DateTime(), DifficultyColor = "red" });
-                    TodoDB.AddTodo(new Models.Todo {  TodoDescription = "Доделать диплом", Difficulty = "Hard", CompletionDate = new DateTime(), DifficultyColor = "red" });
+                 
                 }
                 return todoDB;
             }

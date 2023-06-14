@@ -95,6 +95,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="DB\TodoDB.cs" />
+    <Compile Include="Helpers\WindowHelper.cs" />
     <Compile Include="Models\Todo.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="TaskCreatingWindow.xaml.cs">

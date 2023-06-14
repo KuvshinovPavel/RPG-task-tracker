@@ -19,23 +19,49 @@ namespace RPG_TODOLIST
     /// </summary>
     public partial class TaskCreatingWindow : Window
     {
-      
+        MainWindow mainWindow;
         public TaskCreatingWindow()
         {
 
             InitializeComponent();
 
-            
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            string difficulty = diffsLB.SelectedItem.ToString().Split(':')[1].Trim();
+            string difficultyColor="green";
+            if (difficulty == "Легкая")
+            {
+                difficultyColor = "green";
+            }
+            else if (difficulty == "Средняя")
+            {
+                difficultyColor = "yellow";
+            }
+            else if (difficulty == "Сложная")
+            {
+                difficultyColor = "red";
+            }
+
+            App.TodoDB.AddTodo(new Models.Todo
+            {
+                TodoDescription = todoDescriptionTB.Text,
+                Difficulty = difficulty,
+                DifficultyColor = difficultyColor,
+                CompletionDate = DateTime.Parse(dateTB.Text)
+            });
+            mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
+            
             
         }
 
         private void changeDate(object sender, SelectionChangedEventArgs e)
         {
-            date.Text = cal.SelectedDate.Value.ToShortDateString();
+            dateTB.Text = cal.SelectedDate.Value.ToShortDateString();
         }
     }
 }
