@@ -34,11 +34,11 @@ namespace RPG_TODOLIST
             string difficultyColor="green";
             if (difficulty == "Легкая")
             {
-                difficultyColor = "green";
+                difficultyColor = "#77DD77";   
             }
             else if (difficulty == "Средняя")
             {
-                difficultyColor = "yellow";
+                difficultyColor = "#FFDD5B";   
             }
             else if (difficulty == "Сложная")
             {

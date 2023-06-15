@@ -29,7 +29,7 @@ namespace RPG_TODOLIST
            
             InitializeComponent();
             todos.ItemsSource = App.TodoDB.GetAll().Result;
-
+           
 
         }
         

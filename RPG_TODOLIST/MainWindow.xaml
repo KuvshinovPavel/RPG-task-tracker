@@ -49,7 +49,8 @@
         <Button Name="refreshBtn" Click="RefreshTodos" Canvas.Left="587" Canvas.Top="206" Height="44" Width="44" HorizontalAlignment="Left" VerticalAlignment="Top"></Button>
         <ListView 
             Height="292"
-            Width="522" 
+            Width="522"
+            Background="#2C1D85"
             x:Name="todos"
             SelectionMode="Single"
             Canvas.Left="31"
@@ -57,8 +58,8 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
-                        <Label Content="{Binding TodoDescription}" FontSize="18"/>
-                        <Label Content="{Binding Difficulty}"  FontSize="10" Foreground="{Binding DifficultyColor}"/>
+                        <Label Content="{Binding TodoDescription}" FontSize="18" Foreground="White"/>
+                        <Label Content="{Binding Difficulty}"  FontSize="14" Foreground="{Binding DifficultyColor}" FontFamily="Comic Sans MS" />
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
