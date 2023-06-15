@@ -29,6 +29,7 @@ namespace RPG_TODOLIST
            
             InitializeComponent();
             todos.ItemsSource = App.TodoDB.GetAll().Result;
+            
            
 
         }
@@ -38,7 +39,11 @@ namespace RPG_TODOLIST
             taskCreatingWindow = new TaskCreatingWindow();
             taskCreatingWindow.Show();
             this.Close();
-            }
+        }
+        private void DeleteTask(object sender, RoutedEventArgs e)
+        {
+       
+        }
 
         private void RefreshTodos(object sender, RoutedEventArgs e)
         {

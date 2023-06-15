@@ -46,7 +46,16 @@
             </Button.Resources>
             <Image Source="/assets/plus.png" Height="38" Width="38"/>
         </Button>
+        <Button Click="DeleteTask" Canvas.Left="367" Canvas.Top="118" Height="44" Width="44" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#FF1F1F1F">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="40"/>
+                </Style>
+            </Button.Resources>
+            <Image Source="/assets/cross.png" Height="38" Width="38"/>
+        </Button>
         <Button Name="refreshBtn" Click="RefreshTodos" Canvas.Left="587" Canvas.Top="206" Height="44" Width="44" HorizontalAlignment="Left" VerticalAlignment="Top"></Button>
+
         <ListView 
             Height="292"
             Width="522"
