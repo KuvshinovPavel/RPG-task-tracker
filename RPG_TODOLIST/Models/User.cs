@@ -15,6 +15,10 @@ namespace RPG_TODOLIST.Models
         public string Name { get; set; }
         public string CurrentLivingPlace { get; set; }
         public int Savings{ get; set; }
+
+        public int HP { get; set; }
+        public int Determination { get; set; }
+
         
     }
 }

@@ -1,0 +1,24 @@
+﻿<Window x:Class="RPG_TODOLIST.AuthorizationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RPG_TODOLIST"
+        mc:Ignorable="d"
+        Title="AuthorizationWindow" Height="450" Width="800">
+    <Canvas>
+        <Label Content="Прежде чем приступить к работе, давайте создадим нового пользователя" Height="48" Width="477" Canvas.Left="180" Canvas.Top="25" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
+        <Label Content="Ваше имя:" Canvas.Left="161" Canvas.Top="118"/>
+        <TextBox Name="userNameTB" RenderTransformOrigin="0.5,0.5" Canvas.Top="160" Width="164" Canvas.Left="141">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-22.31"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <Button Click="authorize" Height="73" Content="Войти"  Width="131" Canvas.Left="307" Canvas.Top="217"></Button>
+    </Canvas>
+</Window>

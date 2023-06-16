@@ -94,13 +94,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AuthorizationWindow.xaml.cs">
+      <DependentUpon>AuthorizationWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DB\TodoDB.cs" />
+    <Compile Include="DB\UserDB.cs" />
     <Compile Include="Helpers\WindowHelper.cs" />
     <Compile Include="Models\Todo.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="TaskCreatingWindow.xaml.cs">
       <DependentUpon>TaskCreatingWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="AuthorizationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
