@@ -18,7 +18,7 @@ namespace RPG_TODOLIST.Models
 
         public int HP { get; set; }
         public int Determination { get; set; }
-
+        public int Experience { get; set; }
         
     }
 }

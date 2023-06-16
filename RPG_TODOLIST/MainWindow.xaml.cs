@@ -24,21 +24,61 @@ namespace RPG_TODOLIST
     public partial class MainWindow : Window
     {
         TaskCreatingWindow taskCreatingWindow;
+        AuthorizationWindow authorizationWindow;
+        Binding NameBinding;
+        Binding HPBinding;
+        Binding DeterminationBinding;
+        Binding ExperienceBinding;
+        Binding SavingBinding;
+        User user = App.UserDB.GetUser();
         public MainWindow()
         {
-           
+
             InitializeComponent();
+            if (user == null)
+            {
+                authorizationWindow = new AuthorizationWindow();
+                authorizationWindow.Show();
+                this.Close();
+            }
+            if (user != null)
+            {
+                NameBinding = new Binding() { IsAsync = true };
+                NameBinding.Mode = BindingMode.OneWay;
+                NameBinding.Source = user.Name;
+                UserNameLabel.SetBinding(Label.ContentProperty, NameBinding);
+
+                HPBinding = new Binding() { IsAsync = true };
+                HPBinding.Mode = BindingMode.OneWay;
+                HPBinding.Source = user.HP;
+                HealthBar.SetBinding(ProgressBar.ValueProperty, HPBinding);
+
+                ExperienceBinding = new Binding() { IsAsync = true };
+                ExperienceBinding.Mode = BindingMode.OneWay;
+                ExperienceBinding.Source = user.Experience;
+                //ExperienceBar.SetBinding(ProgressBar.ValueProperty, ExperienceBinding);
+
+                SavingBinding = new Binding() { IsAsync = true };
+                SavingBinding.Mode = BindingMode.OneWay;
+                SavingBinding.Source = user.Savings;
+                SavingsLabel.SetBinding(Label.ContentProperty, SavingBinding);
+            }
             todos.ItemsSource = App.TodoDB.GetAll().Result;
 
 
+
         }
-        
+
         private void AddTask(object sender, RoutedEventArgs e)
         {
             taskCreatingWindow = new TaskCreatingWindow();
             taskCreatingWindow.Show();
             this.Close();
-            }
+        }
+        private void DeleteTask(object sender, RoutedEventArgs e)
+        {
+
+        }
 
         private void RefreshTodos(object sender, RoutedEventArgs e)
         {
@@ -47,32 +87,9 @@ namespace RPG_TODOLIST
 
 
 
-        //TextBox title = new TextBox();
-        //TextBox date = new TextBox();
-        // title.Text = "ПУК СРЕНЬК";
-        // date.Text = "до 13.56.44";
-
-        // Image image = new Image
-        // {
-        //     Source = new ImageSourceConverter().ConvertFromString("../../assets/ruble.png") as ImageSource,
-        //   Width = 50,
-        // };
-        // Canvas c= new Canvas();
-        // c.Margin = new Thickness(20, 20, 20, 20);
-        // c.Width = 236;
-        // c.Height = 108;
-        // c.Children.Add(title);
-        // c.Children.Add(image);
-        // c.Background = new BrushConverter().ConvertFromString("#FFB0F7EF") as Brush; 
-        // c.Children.Add(date);
-
-        // Canvas.SetLeft(title, 66);
-        // Canvas.SetTop(title, 7);
-        // Canvas.SetLeft(date, 169);
-        // Canvas.SetTop(date, 80);
-        // tasks.Children.Add(c);
-
-    }
         
+
     }
+
+}
 

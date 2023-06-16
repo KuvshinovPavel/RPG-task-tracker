@@ -7,17 +7,39 @@
         mc:Ignorable="d"
         Title="Добавить задачу" Height="349" Width="575">
     <Canvas HorizontalAlignment="Center" Width="575" Height="332" VerticalAlignment="Center">
-        <Button Content="ДОБАВИТЬ" HorizontalAlignment="Left" VerticalAlignment="Center" Height="71" Width="574" Background="#FF71FF00" Foreground="White" FontSize="48" Canvas.Top="251" Click="Button_Click"/>
+        <Button Content="ДОБАВИТЬ" HorizontalAlignment="Center" VerticalAlignment="Top" Height="63" Width="413" FontSize="48" Canvas.Top="235" Click="Button_Click" Canvas.Left="84">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#C98582"/>
+                    <Setter Property="Foreground" Value="#933834"></Setter>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#77B97F"/>
+                            <Setter Property="Foreground" Value="#287233"></Setter>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
         <TextBox Name="todoDescriptionTB" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="304" Height="80" Canvas.Left="29" Canvas.Top="34"/>
         <Calendar SelectedDatesChanged="changeDate" x:Name="cal" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="345" Canvas.Top="32" Height="165"/>
         <TextBox Name="dateTB" Canvas.Left="380" TextWrapping="Wrap" Text="" Canvas.Top="14" Width="144" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         <Label Content="ДО:" Canvas.Left="345" Canvas.Top="10" RenderTransformOrigin="-0.234,0.425" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <Label Content="ОПИСАНИЕ ЗАДАЧИ" Canvas.Left="116" Canvas.Top="8" HorizontalAlignment="Left" VerticalAlignment="Center" Width="130"/>
         <Label Content="СЛОЖНОСТЬ ВЫПОЛНЕНИЯ" Canvas.Left="97" Canvas.Top="119" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-        <ListBox Name="diffsLB" Height="65"   Width="222"  Canvas.Left="70" Canvas.Top="145" RenderTransformOrigin="0.427,0.41" HorizontalAlignment="Left" VerticalAlignment="Center">
-            <ListBoxItem Content="Легкая" Background="Black" Foreground="White"/>
-            <ListBoxItem Content="Средняя" Background="#FFFFC700" Foreground="White"></ListBoxItem>
-            <ListBoxItem>Сложная</ListBoxItem>
+        <ListBox Name="diffsLB" Height="72"   Width="222"  Canvas.Left="70" Canvas.Top="145" RenderTransformOrigin="0.427,0.41" HorizontalAlignment="Left" VerticalAlignment="Center" BorderThickness="2" BorderBrush="Black">
+            <ListBoxItem Content="Легкая" Background="#77DD77" Foreground="Black" FontWeight="Bold" BorderBrush="Black" BorderThickness="2"></ListBoxItem>
+            <ListBoxItem Content="Средняя" Background="#FFDD5B" Foreground="Black" FontWeight="Bold" BorderBrush="Black" BorderThickness="2"></ListBoxItem>
+            <ListBoxItem Content="Сложная" Background="#E28090" Foreground="Black" FontWeight="Bold" BorderBrush="Black" BorderThickness="2" ></ListBoxItem>
         </ListBox>
 
     </Canvas>

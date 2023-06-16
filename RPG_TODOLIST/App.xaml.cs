@@ -13,7 +13,8 @@ namespace RPG_TODOLIST
     
     public partial class App : Application
     {
-        static TodoDB todoDB;
+        public static TodoDB todoDB;
+        public static UserDB userDB;
 
         public static TodoDB TodoDB
         {
@@ -28,6 +29,18 @@ namespace RPG_TODOLIST
                 return todoDB;
             }
             set { todoDB = value; }
+        }
+
+        public static UserDB UserDB {
+            get {
+            if (userDB == null)
+                {
+                    UserDB = new UserDB(
+                        Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "user.db"));
+                }
+            return userDB;
+            }
+            set { userDB = value; } 
         }
     }
 }

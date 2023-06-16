@@ -8,15 +8,19 @@ using System.Threading.Tasks;
 
 namespace RPG_TODOLIST.DB
 {
-    public  class UserDB
+    public class UserDB
     {
         readonly SQLiteAsyncConnection _connection;
-        public UserDB( string connectionString) {
+        public UserDB(string connectionString)
+        {
             _connection = new SQLiteAsyncConnection(connectionString);
             _connection.CreateTableAsync<User>().Wait();
-                }
+        }
 
-        public User GetUser(string id) => _connection.QueryAsync<User>("select * from User where id=?", id).Result.First();      
-         
+        public User GetUser() => _connection.QueryAsync<User>("select * from User", 0).Result.FirstOrDefault();
+        public void AuthorizeUser(User user)
+        {
+            _connection.InsertAsync(user).Wait();
+        }
     }
 }

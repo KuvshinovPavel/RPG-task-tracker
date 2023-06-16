@@ -4,17 +4,26 @@
 winexe
 C#
 .cs
-C:\diplom\RPG_TODOLIST\RPG_TODOLIST\obj\Debug\
+C:\Users\Admin\Desktop\RPG\RPG_TODOLIST\obj\Debug\
 RPG_TODOLIST
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
 C:\diplom\RPG_TODOLIST\RPG_TODOLIST\App.xaml
 3-2137129698
 3-1884245280
 131900564399
 130-72957936
 AuthorizationWindow.xaml;MainWindow.xaml;TaskCreatingWindow.xaml;
+=======
+C:\Users\Admin\Desktop\RPG\RPG_TODOLIST\App.xaml
+2814484361
+3945230935
+111326868761
+130-1534824396
+MainWindow.xaml;TaskCreatingWindow.xaml;
+>>>>>>> ccaac717727872cbc16a163601e7f8aeab7a087d
 
-True
+False
 

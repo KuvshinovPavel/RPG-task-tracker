@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="AuthorizationWindow" Height="450" Width="800">
     <Canvas>
-        <Label Content="Прежде чем приступить к работе, давайте создадим нового пользователя" Height="48" Width="477" Canvas.Left="180" Canvas.Top="25" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
+        <Label Content="Прежде чем приступить к работе, давайте создадим нового пользователя" Height="48" Width="477" Canvas.Left="52" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
         <Label Content="Ваше имя:" Canvas.Left="161" Canvas.Top="118"/>
-        <TextBox Name="userNameTB" RenderTransformOrigin="0.5,0.5" Canvas.Top="160" Width="164" Canvas.Left="141">
+        <TextBox Name="userNameTB" RenderTransformOrigin="0.5,0.5" Canvas.Top="114" Width="399" Canvas.Left="142" Height="70">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
