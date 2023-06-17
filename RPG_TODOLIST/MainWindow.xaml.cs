@@ -77,7 +77,12 @@ namespace RPG_TODOLIST
         }
         private void DeleteTask(object sender, RoutedEventArgs e)
         {
-
+            if (todos.SelectedItem != null)
+            { 
+            Todo selectedTask = (Todo)todos.SelectedItem;
+            App.TodoDB.DeleteTodo(selectedTask);
+            todos.ItemsSource = App.TodoDB.GetAll().Result;
+            }
         }
 
         private void RefreshTodos(object sender, RoutedEventArgs e)

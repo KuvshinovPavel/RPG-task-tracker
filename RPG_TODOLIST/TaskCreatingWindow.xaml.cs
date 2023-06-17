@@ -24,13 +24,14 @@ namespace RPG_TODOLIST
         {
 
             InitializeComponent();
-
+            dateTB.Text = DateTime.Today.ToShortDateString();
 
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string difficulty = diffsLB.SelectedItem.ToString().Split(':')[1].Trim();
+            ListBoxItem selectedDifficulty = (ListBoxItem)diffsLB.SelectedItem;
+            string difficulty = selectedDifficulty?.Content.ToString();
             string difficultyColor="green";
             if (difficulty == "Легкая")
             {
@@ -44,13 +45,30 @@ namespace RPG_TODOLIST
             {
                 difficultyColor = "red";
             }
-
+            else if(string.IsNullOrWhiteSpace(difficulty))
+            {
+                difficulty = "Без сложности";
+                difficultyColor = "white";
+            }
+            DateTime selectedDate;
+            try
+            {
+               selectedDate = DateTime.Parse(dateTB.Text);
+            }
+            catch
+            {
+                selectedDate = DateTime.Today.AddDays(1);
+            }
+            if (todoDescriptionTB.Text.Length < 1)
+            {
+                todoDescriptionTB.Text = "Описание задачи отсуствует";
+            }
             App.TodoDB.AddTodo(new Models.Todo
             {
                 TodoDescription = todoDescriptionTB.Text,
                 Difficulty = difficulty,
                 DifficultyColor = difficultyColor,
-                CompletionDate = DateTime.Parse(dateTB.Text)
+                CompletionDate = selectedDate
             });
             mainWindow = new MainWindow();
             mainWindow.Show();
