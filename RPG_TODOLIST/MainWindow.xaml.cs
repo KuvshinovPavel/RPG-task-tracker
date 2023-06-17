@@ -75,6 +75,10 @@ namespace RPG_TODOLIST
             taskCreatingWindow.Show();
             this.Close();
         }
+        private void OpenMarket(object sender, RoutedEventArgs e)
+        {
+           
+        }
         private void DeleteTask(object sender, RoutedEventArgs e)
         {
             if (todos.SelectedItem != null)

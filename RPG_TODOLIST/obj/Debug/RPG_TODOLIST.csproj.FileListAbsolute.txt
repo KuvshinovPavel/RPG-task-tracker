@@ -92,3 +92,5 @@ C:\diplom\RPG_TODOLIST\RPG_TODOLIST\obj\Debug\AuthorizationWindow.g.cs
 C:\diplom\RPG_TODOLIST\RPG_TODOLIST\obj\Debug\AuthorizationWindow.baml
 C:\Users\Admin\Desktop\RPG\RPG_TODOLIST\obj\Debug\AuthorizationWindow.g.cs
 C:\Users\Admin\Desktop\RPG\RPG_TODOLIST\obj\Debug\AuthorizationWindow.baml
+C:\Users\Admin\Desktop\RPG\RPG_TODOLIST\obj\Debug\ShopWindow.g.cs
+C:\Users\Admin\Desktop\RPG\RPG_TODOLIST\obj\Debug\ShopWindow.baml
