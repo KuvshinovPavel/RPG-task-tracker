@@ -22,5 +22,11 @@ namespace RPG_TODOLIST.DB
         {
             _connection.InsertAsync(user).Wait();
         }
+
+        public void UpdateUser(User user, int Savings)
+        {
+            user.Savings += Savings;
+            _connection.UpdateAsync(user).Wait();
+        }
     }
 }

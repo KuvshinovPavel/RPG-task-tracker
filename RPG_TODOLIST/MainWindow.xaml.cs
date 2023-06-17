@@ -77,7 +77,12 @@ namespace RPG_TODOLIST
         }
         private void DeleteTask(object sender, RoutedEventArgs e)
         {
-
+            if (todos.SelectedItem != null)
+            {
+                Todo selectedTask = (Todo)todos.SelectedItem;
+                App.TodoDB.DeleteTodo(selectedTask);
+                todos.ItemsSource = App.TodoDB.GetAll().Result;
+            }
         }
 
         private void RefreshTodos(object sender, RoutedEventArgs e)
@@ -85,10 +90,53 @@ namespace RPG_TODOLIST
             todos.Items.Refresh();
         }
 
+        private void CheckTaskAsCompleted(object sender, RoutedEventArgs e)
+        {
+            int MonetaryReward;
+            MessageBoxResult completeresult;
+
+            if (todos.SelectedItem != null)
+            {
+                completeresult = MessageBox.Show(
+                    "Вы желаете объявить о завершении задачи?",
+                    "Объявить о завершении задачи?",
+                    MessageBoxButton.YesNoCancel,
+                    MessageBoxImage.Information
+                    );
+
+                if (completeresult == MessageBoxResult.Yes)
+                {
+                    Todo selectedTask = (Todo)todos.SelectedItem;
+                    App.TodoDB.DeleteTodo(selectedTask);
+                    todos.ItemsSource = App.TodoDB.GetAll().Result;
 
 
-        
+                    if (selectedTask.Difficulty == "Легкая")
+                    {
+                        MonetaryReward = 10;
 
+
+                    }
+                    else if (selectedTask.Difficulty == "Средняя")
+                    {
+                        MonetaryReward = 50;
+                    }
+                    else if (selectedTask.Difficulty == "Сложная")
+                    {
+                        MonetaryReward = 100;
+                    }
+                    else
+                    {
+                        MonetaryReward = 0;
+                    }
+                    MessageBox.Show(string.Format("Вы получили {0} рублей", MonetaryReward), "Ваша награда" );
+                    App.UserDB.UpdateUser(user, MonetaryReward);
+                    SavingsLabel.Content = int.Parse(SavingsLabel.Content.ToString())+ MonetaryReward;
+                }
+
+
+            }
+        }
     }
 
 }

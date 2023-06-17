@@ -67,7 +67,13 @@
                 <DataTemplate>
                     <StackPanel>
                         <Label Content="{Binding TodoDescription}" FontSize="18" Foreground="White"/>
-                        <Label Content="{Binding Difficulty}"  FontSize="14" Foreground="{Binding DifficultyColor}" FontFamily="Comic Sans MS" />
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="{Binding Difficulty}"  FontSize="14" Foreground="{Binding DifficultyColor}" FontFamily="Comic Sans MS" />
+                            <Button Click="CheckTaskAsCompleted">
+                                <Image Source="/assets/cross.png" Height="38" Width="38"/>
+                            </Button>
+                        </StackPanel>
+                        
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
