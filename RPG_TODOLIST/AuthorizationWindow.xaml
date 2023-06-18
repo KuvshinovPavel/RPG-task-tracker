@@ -5,20 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RPG_TODOLIST"
         mc:Ignorable="d"
-        Title="AuthorizationWindow" Height="450" Width="800">
+        WindowStartupLocation="CenterScreen"
+        Title="AuthorizationWindow" Height="333" Width="549">
     <Canvas>
         <Label Content="Прежде чем приступить к работе, давайте создадим нового пользователя" Height="48" Width="477" Canvas.Left="52" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
-        <Label Content="Ваше имя:" Canvas.Left="161" Canvas.Top="118"/>
-        <TextBox Name="userNameTB" RenderTransformOrigin="0.5,0.5" Canvas.Top="114" Width="399" Canvas.Left="142" Height="70">
+        <Label Content="Ваше имя:" Canvas.Left="223" Canvas.Top="81" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox Name="userNameTB" RenderTransformOrigin="0.5,0.5" Canvas.Top="116" Width="290" Canvas.Left="123" Height="70" HorizontalAlignment="Left" VerticalAlignment="Top">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
-                    <RotateTransform Angle="-22.31"/>
+                    <RotateTransform Angle="0.155"/>
                     <TranslateTransform/>
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <Button Click="authorize" Height="73" Content="Войти"  Width="131" Canvas.Left="307" Canvas.Top="217"></Button>
+        <Button Click="authorize" Height="73" Content="Войти"  Width="132" Canvas.Left="189" Canvas.Top="201" HorizontalAlignment="Left" VerticalAlignment="Top"></Button>
     </Canvas>
 </Window>

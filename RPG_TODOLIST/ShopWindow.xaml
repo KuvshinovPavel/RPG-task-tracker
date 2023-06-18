@@ -5,11 +5,73 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RPG_TODOLIST"
         mc:Ignorable="d"
-        Title="ShopWindow" Height="450" Width="800">
-    <TabControl>
-        <TabItem Header="Вкладка 1">Первая вкладка
+        WindowStartupLocation="CenterScreen"
+        Title="Магазин" Height="450" Width="800">
+    <TabControl x:Name="shop">
+            
 
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/assets/moving.png" Height="28" Width="28"></Image>
+                        <TextBlock>Смена фона</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+            <TabItem.Content>
+                <StackPanel>
+                   
+                    <GroupBox Height="100">
+                        <GroupBox.Content>
+                            <StackPanel>
+                                <RadioButton x:Name="rB1">
+                                    <RadioButton.Content>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock>Канашᅠ ᅠ10</TextBlock>
+                                            <Image Height="15" Width="24" Source="/assets/ruble.png"/>
+                                        </StackPanel>
+                                    </RadioButton.Content>  
+                                </RadioButton>
+                                <RadioButton x:Name="rB2" >
+                                    <RadioButton.Content>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock>Чебоксары 20</TextBlock>
+                                            <Image Height="15" Width="20" Source="/assets/ruble.png"/>
+                                        </StackPanel>
+                                    </RadioButton.Content>
+                                </RadioButton>
+                                <Button x:Name="boughtBtn" Click="BuyBackground" Width="63" Content="Купить" HorizontalAlignment="Left"/>
+                            </StackPanel>
+                        </GroupBox.Content>
+                    </GroupBox>
+                </StackPanel>
+            </TabItem.Content>
         </TabItem>
-        <TabItem Header="Вкладка 2">Вторая вкладка</TabItem>
+        
+        <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/assets/services.png" Height="28" Width="28"></Image>
+                        <TextBlock>Товары</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+
+            </TabItem>
+        
+        
+        <TabItem>
+            <TabItem.Header>
+                <StackPanel Orientation="Horizontal">
+                    <Button Click="Exit_Click" Height="44" Width="44" HorizontalAlignment="Left" VerticalAlignment="Center">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="40"/>
+                            </Style>
+                        </Button.Resources>
+                        <Image Source="/assets/exit.png" Height="38" Width="38"/>
+                    </Button>
+                </StackPanel>
+            </TabItem.Header>
+        </TabItem>
     </TabControl>
+
 </Window>

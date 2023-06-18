@@ -20,8 +20,10 @@ namespace RPG_TODOLIST
     /// </summary>
     public partial class AuthorizationWindow : Window
     {
+        MainWindow mainWindow;
         public AuthorizationWindow()
         {
+            
             InitializeComponent();
         }
 
@@ -36,7 +38,12 @@ namespace RPG_TODOLIST
                 Determination=50,
                 HP = 100,
                 Savings = 0
-            }); ;
+            }
+            );
+            mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
+
         }
     }
 }

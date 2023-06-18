@@ -23,7 +23,11 @@ namespace RPG_TODOLIST
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static int cash;
+        
+        public static string backgroundImagePath = "background_beginner.jpg";
         TaskCreatingWindow taskCreatingWindow;
+        ShopWindow shopWindow;
         AuthorizationWindow authorizationWindow;
         Binding NameBinding;
         Binding HPBinding;
@@ -61,8 +65,12 @@ namespace RPG_TODOLIST
                 SavingBinding = new Binding() { IsAsync = true };
                 SavingBinding.Mode = BindingMode.OneWay;
                 SavingBinding.Source = user.Savings;
+                cash = user.Savings;
                 SavingsLabel.SetBinding(Label.ContentProperty, SavingBinding);
             }
+
+            string assetsPath = "pack://application:,,,/assets/"+backgroundImagePath;
+            backgroundImage.ImageSource = new BitmapImage(new Uri(assetsPath));
             todos.ItemsSource = App.TodoDB.GetAll().Result;
 
 
@@ -77,7 +85,9 @@ namespace RPG_TODOLIST
         }
         private void OpenMarket(object sender, RoutedEventArgs e)
         {
-           
+            shopWindow = new ShopWindow();
+            shopWindow.Show();
+            this.Close();
         }
         private void DeleteTask(object sender, RoutedEventArgs e)
         {
@@ -135,7 +145,8 @@ namespace RPG_TODOLIST
                     }
                     MessageBox.Show(string.Format("Вы получили {0} рублей", MonetaryReward), "Ваша награда" );
                     App.UserDB.UpdateUser(user, MonetaryReward);
-                    SavingsLabel.Content = int.Parse(SavingsLabel.Content.ToString())+ MonetaryReward;
+                    cash = int.Parse(SavingsLabel.Content.ToString())+ MonetaryReward;
+                    SavingsLabel.Content = cash;
                 }
 
 

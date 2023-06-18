@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RPG_TODOLIST"
         mc:Ignorable="d"
+         WindowStartupLocation="CenterScreen"
         Title="Добавить задачу" Height="349" Width="575">
     <Canvas HorizontalAlignment="Center" Width="575" Height="332" VerticalAlignment="Center">
         <Button Content="ДОБАВИТЬ" HorizontalAlignment="Center" VerticalAlignment="Top" Height="63" Width="413" FontSize="48" Canvas.Top="235" Click="Button_Click" Canvas.Left="84">
