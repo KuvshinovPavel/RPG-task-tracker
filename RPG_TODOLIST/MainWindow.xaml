@@ -13,7 +13,7 @@
             <Grid.Background>
                 <ImageBrush x:Name="backgroundImage" Opacity=".7" ></ImageBrush>
             </Grid.Background>
-            <Image x:Name="player" Source="/assets/beginner.png"/>
+            <Image x:Name="playerImage"/>
         </Grid>
 
         <Label Name="UserNameLabel" Content="{Binding Name}" Canvas.Left="202" HorizontalAlignment="Left" VerticalAlignment="Center" Width="180" Foreground="White" Canvas.Top="10" FontFamily="Comic Sans MS" FontSize="16"/>

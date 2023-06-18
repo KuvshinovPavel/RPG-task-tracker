@@ -202,6 +202,10 @@
   <ItemGroup>
     <Resource Include="assets\background_сheboksary.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\girlMoment.png" />
+    <Resource Include="assets\man1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

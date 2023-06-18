@@ -28,5 +28,11 @@ namespace RPG_TODOLIST.DB
             user.Savings += Savings;
             _connection.UpdateAsync(user).Wait();
         }
+        public void UpdateUserBackgroundImage(User user, string path)
+        {
+            user.BackgroundImagePath = path;
+            _connection.UpdateAsync(user).Wait();
+        }
+
     }
 }

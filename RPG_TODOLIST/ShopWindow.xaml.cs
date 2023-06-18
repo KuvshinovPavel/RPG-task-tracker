@@ -36,15 +36,15 @@ namespace RPG_TODOLIST
         private void BuyBackground(object sender, RoutedEventArgs e)
         {
 
-            if (rB1.IsChecked==true && MainWindow.cash>=10)
+            if (rB1.IsChecked==true && App.UserDB.GetUser().Savings >= 10)
             {
-                
-                MainWindow.backgroundImagePath = "background_kanash.jpg";
+                App.userDB.UpdateUserBackgroundImage(App.UserDB.GetUser(), "pack://application:,,,/assets/background_kanash.jpg");
                 boughtBtn.IsEnabled = false;
             }
-            else if(rB2.IsChecked==true&& MainWindow.cash>=20) 
+            else if(rB2.IsChecked==true&& App.UserDB.GetUser().Savings>=20) 
             {
-                MainWindow.backgroundImagePath = "background_сheboksary.jpg";
+                App.userDB.UpdateUserBackgroundImage(App.UserDB.GetUser(), "pack://application:,,,/assets/background_сheboksary.jpg");
+                boughtBtn.IsEnabled = false;
             }
         }
 

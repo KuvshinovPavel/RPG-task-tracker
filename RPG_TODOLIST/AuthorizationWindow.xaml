@@ -9,8 +9,8 @@
         Title="AuthorizationWindow" Height="333" Width="549">
     <Canvas>
         <Label Content="Прежде чем приступить к работе, давайте создадим нового пользователя" Height="48" Width="477" Canvas.Left="52" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
-        <Label Content="Ваше имя:" Canvas.Left="223" Canvas.Top="81" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <TextBox Name="userNameTB" RenderTransformOrigin="0.5,0.5" Canvas.Top="116" Width="290" Canvas.Left="123" Height="70" HorizontalAlignment="Left" VerticalAlignment="Top">
+        <Label Content="Ваше имя:" Canvas.Left="158" Canvas.Top="83" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox Name="userNameTB" RenderTransformOrigin="0.5,0.5" Canvas.Top="116" Width="138" Canvas.Left="123" Height="18" HorizontalAlignment="Left" VerticalAlignment="Top">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -20,6 +20,21 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <Button Click="authorize" Height="73" Content="Войти"  Width="132" Canvas.Left="189" Canvas.Top="201" HorizontalAlignment="Left" VerticalAlignment="Top"></Button>
+        <GroupBox Canvas.Left="355" Canvas.Top="45" HorizontalAlignment="Center" Height="262" VerticalAlignment="Top" Width="174" Header="Выберите фото персонажа">
+            <Canvas Margin="0,-31,0,0">
+                <RadioButton IsChecked="True" HorizontalAlignment="Left" Canvas.Top="47" VerticalAlignment="Top" Checked="RadioButton_Checked" Canvas.Left="10" Width="105">
+                    <Image Source="/assets/beginner.png" Height="63" Canvas.Left="65" Width="58"/>
+                </RadioButton>
+
+                <RadioButton HorizontalAlignment="Center" Canvas.Top="184" VerticalAlignment="Top" Canvas.Left="10" Height="61" Width="105" Checked="RadioButton_Checked_2">
+                    <Image Source="/assets/girlmoment.png" Height="42" Canvas.Left="65" Width="64"/>
+                </RadioButton>
+                <RadioButton HorizontalAlignment="Left" Canvas.Top="114" VerticalAlignment="Center" Checked="RadioButton_Checked_1" Height="70" Width="105" Canvas.Left="10">
+                    <Image Source="/assets/man1.png" Height="40" Canvas.Left="65" Width="60"/>
+                </RadioButton>
+            </Canvas>
+        </GroupBox>
+
+        <Button Click="authorize" Height="67" Content="Войти"  Width="115" Canvas.Left="134" Canvas.Top="159" HorizontalAlignment="Left" VerticalAlignment="Top"></Button>
     </Canvas>
 </Window>

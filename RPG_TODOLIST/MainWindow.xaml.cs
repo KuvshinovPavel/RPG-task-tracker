@@ -23,9 +23,7 @@ namespace RPG_TODOLIST
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static int cash;
         
-        public static string backgroundImagePath = "background_beginner.jpg";
         TaskCreatingWindow taskCreatingWindow;
         ShopWindow shopWindow;
         AuthorizationWindow authorizationWindow;
@@ -34,7 +32,7 @@ namespace RPG_TODOLIST
         Binding DeterminationBinding;
         Binding ExperienceBinding;
         Binding SavingBinding;
-        User user = App.UserDB.GetUser();
+        public User user = App.UserDB.GetUser();
         public MainWindow()
         {
 
@@ -65,13 +63,17 @@ namespace RPG_TODOLIST
                 SavingBinding = new Binding() { IsAsync = true };
                 SavingBinding.Mode = BindingMode.OneWay;
                 SavingBinding.Source = user.Savings;
-                cash = user.Savings;
                 SavingsLabel.SetBinding(Label.ContentProperty, SavingBinding);
+
+
+              
+                backgroundImage.ImageSource = new BitmapImage(new Uri(user.BackgroundImagePath));
+                playerImage.Source = new BitmapImage(new Uri(user.PlayerImagePath));
+                todos.ItemsSource = App.TodoDB.GetAll().Result;
+
             }
 
-            string assetsPath = "pack://application:,,,/assets/"+backgroundImagePath;
-            backgroundImage.ImageSource = new BitmapImage(new Uri(assetsPath));
-            todos.ItemsSource = App.TodoDB.GetAll().Result;
+            
 
 
 
@@ -145,8 +147,7 @@ namespace RPG_TODOLIST
                     }
                     MessageBox.Show(string.Format("Вы получили {0} рублей", MonetaryReward), "Ваша награда" );
                     App.UserDB.UpdateUser(user, MonetaryReward);
-                    cash = int.Parse(SavingsLabel.Content.ToString())+ MonetaryReward;
-                    SavingsLabel.Content = cash;
+                    SavingsLabel.Content = int.Parse(SavingsLabel.Content.ToString())+ MonetaryReward;               
                 }
 
 
