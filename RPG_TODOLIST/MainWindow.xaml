@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:RPG_TODOLIST"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="Органайзер" Height="638" Width="1218">
+        Title="Органайзер" Height="638" Width="598">
     <Canvas Background="#6A5ACD" RenderTransformOrigin="0.527,0.516">
 
         <Grid Height="150" Width="180" Canvas.Left="10" Canvas.Top="10">
@@ -81,6 +81,7 @@
                             <Button Click="CheckTaskAsCompleted">
                                 <Image Source="/assets/cross.png" Height="38" Width="38"/>
                             </Button>
+                            <Label Language="ru-Ru" Content="{Binding CompletionDate}" Foreground="Gold"></Label>
                         </StackPanel>
 
                     </StackPanel>
